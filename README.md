@@ -5,7 +5,9 @@ The aim of this project is to perform inference of a CNN on CPU using the [fruga
 
 ### Verify your cmake version
 To install [frugally-deep](https://github.com/Dobiasd/frugally-deep), you need cmake 3.14 or higher. You can check your cmake version by executing:
-`cmake --version`
+```bash
+cmake --version
+```
 
 >If your version of cmake is too old, you should upgrade it (see https://cmake.org/download/).
 
@@ -51,7 +53,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 ```
 
 ## Testing the environment
-Go to the root of the directory, create a **build** folder and simply do `make`.
+Go to the root of the directory, create a **build** folder and simply do:
+```bash
+make
+```
 
 
 
