@@ -1,5 +1,5 @@
 CXX = g++
-CFLAGS = -Wall
+CFLAGS = -Wall -Ofast -march=native
 LDFLAGS = -lcnpy -lz -L /usr/local/lib
 
 SRC = src/main.cpp
@@ -10,7 +10,7 @@ default:
 	@echo "\nCompiling...\n"
 	@make all 
 	@echo "\nRunning...\n"
-	@(cd build/ && exec ./main)
+	@(LD_LIBRARY_PATH=/usr/local/lib && cd build/ && exec ./main)
  
 all: 
 	@$(CXX) $(SRC) $(CFLAGS) $(LDFLAGS) -o $(OUTPUT)

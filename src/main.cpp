@@ -36,9 +36,9 @@ int main()
     
     elapsedTimes.push_back(elapsed.count() * 1000);
     
-    bar.progress(1, 100);
+    bar.progress(1, 1000);
     
-    for(int i = 0; i < 99; i++) {
+    for(int i = 0; i < 999; i++) {
     
 	    auto start = chrono::high_resolution_clock::now();
 	    const auto innerResult = model.predict({input,qp});
@@ -46,7 +46,7 @@ int main()
 	    
 	    elapsedTimes.push_back(elapsed.count() * 1000);
 	    
-	    bar.progress(i+1, 100);
+	    bar.progress(i+1, 1000);
     
     }
     
